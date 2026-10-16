@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — CSE | Congo Service Engineering SARL</title>
+  <meta name="description" content="Get in touch with Congo Service Engineering SARL or request a quote for your project.">
+  <link rel="icon" type="image/png" href="assets/cse-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/cse-logo.png" alt="CSE — Congo Service Engineering SARL" width="720" height="410"></a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#clients">Clients &amp; Partners</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Contact Us</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#clients">Clients &amp; Partners</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="founders.html">Our Founders</a>
+      <a class="btn btn-primary" href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero page-hero--compact">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Contact</nav>
+        <h1>Get in touch</h1>
+        <p>Tell us about your project and our team will get back to you.</p>
+      </div>
+    </section>
+
+    <div class="container contact-layout">
+      <div class="contact-info">
+        <dl>
+          <div><dt>Office</dt><dd>[Street address], [City], DR Congo</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+243000000000" style="color:inherit">[+243 000 000 000]</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info@cse-company.cd" style="color:inherit">[info@cse-company.cd]</a></dd></div>
+        </dl>
+        <div class="map-placeholder">Office location map (embed)</div>
+      </div>
+
+      <section class="contact-card" id="quote" aria-label="Contact form">
+        <div class="seg" role="tablist" aria-label="Enquiry type" data-form-tabs>
+          <button type="button" role="tab" data-mode="contact" aria-selected="true">General enquiry</button>
+          <button type="button" role="tab" data-mode="quote" aria-selected="false">Request a quote</button>
+        </div>
+        <form class="form-grid" data-contact-form novalidate>
+          <label class="field">Full name<input name="name" autocomplete="name" required></label>
+          <label class="field">Company<input name="company" autocomplete="organization"></label>
+          <label class="field">Email<input name="email" type="email" autocomplete="email" required></label>
+          <label class="field">Phone<input name="phone" type="tel" autocomplete="tel"></label>
+          <label class="field" data-quote-only hidden>Service required
+            <select name="service" disabled>
+              <option data-key="civil">Civil Engineering &amp; Construction</option>
+              <option data-key="industrial">Industrial Engineering</option>
+              <option data-key="mechanical">Mechanical Engineering</option>
+              <option data-key="electrical">Electrical Installations</option>
+              <option data-key="infrastructure">Infrastructure Development</option>
+              <option data-key="maintenance">Technical Maintenance</option>
+            </select>
+          </label>
+          <label class="field" data-quote-only hidden>Project location<input name="location" disabled></label>
+          <label class="field field--full"><span data-msg-label>Message</span><textarea name="message" required></textarea></label>
+          <div class="form-actions field--full">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-note" data-form-note role="status"></p>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html"><img src="assets/cse-logo.png" alt="CSE — Congo Service Engineering SARL" width="720" height="410" loading="lazy"></a>
+          <p>Engineering, industrial and technical services for the Democratic Republic of Congo.</p>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="WhatsApp">wa</a>
+          </div>
+        </div>
+        <nav class="footer-col" aria-labelledby="f-company">
+          <h2 id="f-company">Company</h2>
+          <a href="index.html#about">About Us</a>
+          <a href="founders.html">Our Founders</a>
+          <a href="projects.html">Projects</a>
+          <a href="index.html#clients">Clients &amp; Partners</a>
+          <a href="index.html#gallery">Gallery</a>
+        </nav>
+        <nav class="footer-col" aria-labelledby="f-services">
+          <h2 id="f-services">Services</h2>
+          <a href="services.html#civil">Civil &amp; Construction</a>
+          <a href="services.html#industrial">Industrial</a>
+          <a href="services.html#mechanical">Mechanical</a>
+          <a href="services.html#electrical">Electrical</a>
+          <a href="services.html#infrastructure">Infrastructure</a>
+          <a href="services.html#maintenance">Maintenance</a>
+        </nav>
+        <div class="footer-col footer-col--contact">
+          <h2>Contact</h2>
+          <address>[Street address]<br>[City], DR Congo</address>
+          <a href="tel:+243000000000">[+243 000 000 000]</a>
+          <a href="mailto:info@cse-company.cd">[info@cse-company.cd]</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Congo Service Engineering SARL. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
