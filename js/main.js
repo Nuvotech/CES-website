@@ -43,6 +43,75 @@
     });
   }
 
+  /* ---------- Home hero slider ---------- */
+
+  var hero = document.querySelector('[data-hero-slider]');
+  if (hero) {
+    var heroTrack = hero.querySelector('.hero__track');
+    var slides = hero.querySelectorAll('.hero__slide');
+    var dots = hero.querySelectorAll('.hero__dot');
+    var count = slides.length;
+    var current = 0;
+    var timer = null;
+    var DELAY = 6000;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var show = function (i) {
+      current = (i + count) % count;
+      heroTrack.style.transform = 'translateX(' + (-100 * current) + '%)';
+      slides.forEach(function (s, j) {
+        var on = j === current;
+        s.classList.toggle('is-active', on);
+        s.setAttribute('aria-hidden', String(!on));
+        // Lazy slides load as soon as they're next up, so the slide-in is never blank.
+        if (j === (current + 1) % count) s.querySelector('img').loading = 'eager';
+      });
+      dots.forEach(function (d, j) {
+        d.setAttribute('aria-current', String(j === current));
+      });
+    };
+
+    var stop = function () { clearInterval(timer); timer = null; };
+    var start = function () {
+      if (reduceMotion || count < 2) return;
+      stop();
+      timer = setInterval(function () { show(current + 1); }, DELAY);
+    };
+
+    hero.addEventListener('click', function (e) {
+      var dot = e.target.closest('.hero__dot');
+      var arrow = e.target.closest('.hero__arrow');
+      if (dot) show(Array.prototype.indexOf.call(dots, dot));
+      else if (arrow) show(current + Number(arrow.getAttribute('data-dir')));
+      else return;
+      start();
+    });
+
+    // Pause while the visitor is reading or using the controls.
+    hero.addEventListener('mouseenter', stop);
+    hero.addEventListener('mouseleave', start);
+    hero.addEventListener('focusin', stop);
+    hero.addEventListener('focusout', function (e) {
+      if (!hero.contains(e.relatedTarget)) start();
+    });
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop(); else start();
+    });
+
+    // Swipe on touch screens.
+    var touchX = null;
+    hero.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+    hero.addEventListener('touchend', function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 40) { show(current + (dx < 0 ? 1 : -1)); start(); }
+    });
+
+    show(0);
+    start();
+  }
+
   /* ---------- Clients marquee: duplicate the set for a seamless loop ---------- */
 
   var track = document.querySelector('.marquee__track');

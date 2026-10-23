@@ -48,9 +48,22 @@
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <img src="https://images.pexels.com/photos/2138126/pexels-photo-2138126.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" fetchpriority="high">
+    <section class="hero" data-hero-slider aria-roledescription="carousel" aria-label="CSE at work">
+      <div class="hero__slides">
+        <div class="hero__track">
+          <figure class="hero__slide" aria-roledescription="slide" aria-label="1 of 4">
+            <img src="assets/images/slides/slide-1.webp" alt="CSE technicians welding heavy mining equipment in a workshop" fetchpriority="high">
+          </figure>
+          <figure class="hero__slide" aria-roledescription="slide" aria-label="2 of 4">
+            <img src="assets/images/slides/briefing.webp" alt="CSE engineers reviewing site plans at an open-pit mine" loading="lazy">
+          </figure>
+          <figure class="hero__slide" aria-roledescription="slide" aria-label="3 of 4">
+            <img src="assets/images/slides/inspection.webp" alt="CSE engineers inspecting a conveyor belt at a processing plant" loading="lazy">
+          </figure>
+          <figure class="hero__slide" aria-roledescription="slide" aria-label="4 of 4">
+            <img src="assets/images/slides/slide-2.webp" alt="CSE service truck lifting an engine from an excavator on a mine site" loading="lazy">
+          </figure>
+        </div>
       </div>
       <div class="container hero__inner">
         <div class="hero__content">
@@ -61,73 +74,24 @@
             <a class="btn btn-primary" href="services.html">Explore Our Services
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a class="btn btn-outline" href="projects.html">View Our Projects</a>
-          </div>
-          <div class="hero__media">
-            <img class="cover" src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Engineers on an industrial site" loading="lazy">
+            <a class="btn btn-outline btn-outline--light" href="projects.html">View Our Projects</a>
           </div>
         </div>
-        <div class="hero__art" aria-hidden="true">
-          <svg viewBox="0 0 400 440" fill="none">
-            <defs>
-              <pattern id="lat-h" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 0L14 14M14 0L0 14" stroke="#1F4E8C" stroke-width="1"/></pattern>
-              <pattern id="lat-v" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0 0L20 20M20 0L0 20" stroke="#1F4E8C" stroke-width="1"/></pattern>
-            </defs>
-
-            <!-- ground -->
-            <path d="M10 420H390" stroke="#94A3B8" stroke-width="2"/>
-
-            <!-- building under construction -->
-            <g class="build">
-              <rect x="50" y="330" width="135" height="90" fill="#E6EFFB" opacity=".7"/>
-              <path d="M50 420V330M95 420V330M140 420V330M185 420V330" stroke="#1F4E8C" stroke-width="3"/>
-              <path d="M46 390H189M46 360H189M46 330H189" stroke="#1F4E8C" stroke-width="4"/>
-              <g fill="#fff" stroke="#1F4E8C" stroke-width="1">
-                <rect x="58" y="396" width="29" height="16"/><rect x="103" y="396" width="29" height="16"/><rect x="148" y="396" width="29" height="16"/>
-                <rect x="58" y="366" width="29" height="16"/><rect x="103" y="366" width="29" height="16"/><rect x="148" y="366" width="29" height="16"/>
-                <rect x="58" y="336" width="29" height="16"/><rect x="103" y="336" width="29" height="16"/>
-              </g>
-              <!-- unfinished top floor -->
-              <path d="M50 330V300M95 330V300M140 330V300M185 330V300M46 300H189" stroke="#1F4E8C" stroke-width="2" stroke-dasharray="5 4"/>
-              <g class="sparks">
-                <circle cx="185" cy="300" r="2.4" fill="#F59E0B"/>
-                <circle cx="190" cy="295" r="1.4" fill="#F59E0B"/>
-                <circle cx="181" cy="294" r="1.2" fill="#FBBF24"/>
-                <circle cx="191" cy="303" r="1" fill="#FBBF24"/>
-              </g>
-            </g>
-
-            <!-- beams waiting to be lifted -->
-            <g fill="#C4000A" opacity=".85">
-              <rect x="196" y="412" width="40" height="4" rx="1"/><rect x="200" y="416" width="40" height="4" rx="1"/>
-            </g>
-
-            <!-- tower crane -->
-            <rect x="250" y="60" width="20" height="360" fill="url(#lat-v)" stroke="#1F4E8C" stroke-width="2"/>
-            <rect x="238" y="412" width="44" height="8" rx="1" fill="#1F4E8C"/>
-            <path d="M250 60L260 22L270 60" stroke="#1F4E8C" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M260 22L40 60M260 22L372 60" stroke="#1F4E8C" stroke-width="1.2"/>
-            <rect x="40" y="60" width="210" height="14" fill="url(#lat-h)" stroke="#1F4E8C" stroke-width="2"/>
-            <rect x="270" y="60" width="102" height="12" fill="url(#lat-h)" stroke="#1F4E8C" stroke-width="2"/>
-            <rect x="336" y="72" width="32" height="24" rx="1" fill="#1F4E8C"/>
-            <rect x="226" y="74" width="24" height="20" rx="2" fill="#fff" stroke="#1F4E8C" stroke-width="2"/>
-            <rect x="230" y="78" width="12" height="8" fill="#E6EFFB"/>
-            <circle class="beacon" cx="260" cy="17" r="4.5" fill="#C4000A"/>
-
-            <!-- trolley, cable and load -->
-            <g class="trolley">
-              <rect x="-10" y="74" width="20" height="7" rx="1.5" fill="#1F4E8C"/>
-              <rect class="cable" x="-0.75" y="81" width="1.5" height="100" fill="#172536"/>
-              <g class="hoist">
-                <g class="swing">
-                  <path d="M0 181v6a4 4 0 1 1-4 4" stroke="#172536" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M-20 196L0 189L20 196" stroke="#172536" stroke-width="1.2"/>
-                  <rect x="-25" y="196" width="50" height="5" rx="1" fill="#C4000A"/>
-                  <rect x="-25" y="203" width="50" height="5" rx="1" fill="#C4000A"/>
-                </g>
-              </g>
-            </g>
-          </svg>
+      </div>
+      <div class="container hero__controls">
+        <div class="hero__dots" role="group" aria-label="Choose slide">
+          <button type="button" class="hero__dot" aria-label="Show slide 1"></button>
+          <button type="button" class="hero__dot" aria-label="Show slide 2"></button>
+          <button type="button" class="hero__dot" aria-label="Show slide 3"></button>
+          <button type="button" class="hero__dot" aria-label="Show slide 4"></button>
+        </div>
+        <div class="hero__arrows">
+          <button type="button" class="hero__arrow" data-dir="-1" aria-label="Previous slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <button type="button" class="hero__arrow" data-dir="1" aria-label="Next slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
     </section>
